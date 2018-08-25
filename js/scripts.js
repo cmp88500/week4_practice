@@ -1,22 +1,43 @@
-// 1. CREATE OBJECT AND LIST KEY VALUE PAIRS
-var varOne = {
-  keyOne: "aValue",
-  keyTwo: "bValue",
-  keyThree: ["aArray", "bArray", "cArray"],
-  arrayOne: ["bArray", "cArray"],
-  keyFour: 10,
-  keyFive: 5,
-};
+// 1. CREATE OBJECT AND LIST KEY VALUE PAIRS WITH LITERAL NOTATION
+// var varOne = {
+//   keyOne: "aValue",
+//   keyTwo: "bValue",
+//   keyThree: ["aArray", "bArray", "cArray"],
+//   arrayOne: ["bArray", "cArray"],
+//   keyFour: 10,
+//   keyFive: 5,
+// };
+//
+// var four = varOne.keyFour
+//
+// console.log("keyOne: " + varOne.keyOne);
+// console.log("keyThree: " + varOne.keyThree);
+// console.log("keyThree item 2: " + varOne.keyThree[1]);
+// console.log("keyFour = " + varOne.keyFour);
+// console.log("keyFour + keyFive = " + varOne.keyFour + varOne.keyFive);
+// console.log("keyFour + keyFive = " + parseInt(varOne.keyFour + varOne.keyFive))
+// console.log("variable four = " + four);
 
-var four = varOne.keyFour
+// 2. CREATE OBJECT AND LIST KEY VALUE PAIRS WITH CONSTRUCTOR
+var constructOne = new String;
+console.log(constructOne);
 
-console.log("keyOne: " + varOne.keyOne);
-console.log("keyThree: " + varOne.keyThree);
-console.log("keyThree item 2: " + varOne.keyThree[1]);
-console.log("keyFour = " + varOne.keyFour);
-console.log("keyFour + keyFive = " + varOne.keyFour + varOne.keyFive);
-console.log("keyFour + keyFive = " + parseInt(varOne.keyFour + varOne.keyFive))
-console.log("variable four = " + four);
+var constructTwo = new String("Hello!");
+console.log(constructTwo);
+
+function Var(keyOne, keyTwo, keyThree) {
+  this.keyOne = keyOne;
+  this.keyTwo = keyTwo;
+  this.keyThree = keyThree;
+}
+
+var varTwo = new Var("aValue", "bValue", ["aArray", "bArray", "cArray"]);
+
+console.log("keyOne of varTwo = " + varTwo.keyOne);
+console.log("keyThree of varTwo = " + varTwo.keyThree);
+console.log(varTwo);
+console.log("varTwo = " + varTwo);
+
 
 
 // if (keyThree = "aArray")
