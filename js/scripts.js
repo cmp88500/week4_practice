@@ -19,25 +19,61 @@
 // console.log("variable four = " + four);
 
 // 2. CREATE OBJECT AND LIST KEY VALUE PAIRS WITH CONSTRUCTOR
-var constructOne = new String;
-console.log(constructOne);
+// var constructOne = new String;
+// console.log(constructOne);
+//
+// var constructTwo = new String("Hello!");
+// console.log(constructTwo);
+//
+// function Var(keyOne, keyTwo, keyThree) {
+//   this.keyOne = keyOne;
+//   this.keyTwo = keyTwo;
+//   this.keyThree = keyThree;
+// }
+//
+// var varTwo = new Var("aValue", "bValue", ["aArray", "bArray", "cArray"]);
+//
+// console.log("keyOne of varTwo = " + varTwo.keyOne);
+// console.log("keyThree of varTwo = " + varTwo.keyThree);
+// console.log(varTwo);
+// console.log("varTwo = " + varTwo);
 
-var constructTwo = new String("Hello!");
-console.log(constructTwo);
-
-function Var(keyOne, keyTwo, keyThree) {
+// 3. DECLARE FUNCTION FOR OBJECT WITH PROTOTYPES, OR OBJECT WHERE OTHER OBJECTS INHERIT METHODS. CREATED TREE FIDDY CONVERTER.
+function Var(keyOne, keyTwo, keyThree, keyFour) {
   this.keyOne = keyOne;
   this.keyTwo = keyTwo;
   this.keyThree = keyThree;
 }
 
-var varTwo = new Var("aValue", "bValue", ["aArray", "bArray", "cArray"]);
+var varOne = new Var(10, 5, 7);
 
-console.log("keyOne of varTwo = " + varTwo.keyOne);
-console.log("keyThree of varTwo = " + varTwo.keyThree);
-console.log(varTwo);
-console.log("varTwo = " + varTwo);
 
+console.log(varOne);
+console.log("keyTwo of varOne = " + varOne.keyTwo);
+
+Var.prototype.add = function() {
+  return parseInt(this.keyOne + this.keyTwo + this.keyThree);
+}
+
+Var.prototype.multiply = function() {
+  return parseInt(this.keyOne * this.keyTwo * this.keyThree);
+}
+
+console.log("Sum of varOne array = " + varOne.add());
+
+function treeFiddy(x) {
+var multiply = varOne.multiply() - x;
+  if (multiply === 350) {
+    console.log("Total of array = " + "Tree Fiddy");
+  }
+  else {
+    console.log("Total of array = " + multiply);
+  }
+}
+
+treeFiddy(2);
+treeFiddy(1);
+treeFiddy(0);
 
 
 // if (keyThree = "aArray")
